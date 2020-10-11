@@ -3,29 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
     <title>Document</title>
 </head>
 <body>   
    <div id="seccion-formulario">
         <h2>Sistema de vehículos</h2>
-        <form>
+        <form onsubmit="return false">
               <div class="form-group">
                   <label class="lab" for="nombreVehiculo">Nombre del vehiculo</label>
-                  <input type="text" class="form-control" id="entradaVehiculo" placeholder="Ingrese un vehiculo">
+                  <input name="vehiculodesc" type="text" class="form-control" id="entradaVehiculo" placeholder="Ingrese un vehiculo">
               </div>
               <div class="form-group">
                   <label class="lab" for="antiguedadVehiculo">Ingrese antigüedad</label>
-                  <input type="number" class="form-control" id="entradaAntiguedad" placeholder="Ingrese años de antigüedad">
+                  <input name="vehiculoant" type="number" class="form-control" id="entradaAntiguedad" placeholder="Ingrese años de antigüedad">
               </div>
-              <button id="boton-agregar" type="submit" class="btn btn-danger">Añadir vehiculo</button>
-              <button id="agregar">Click</button>
+              <button id="boton-agregar" type="reset" class="btn btn-danger">Añadir vehiculo</button>
+              <button id="promedio" type="reset" class="btn btn-danger">Calcular promedio</button>
+              <div id="contador"><p>Cantidad de vehículos: 0</p></div>
+              
         </form>
    </div>
-   <div id="contador">Hola</div>
+   
    <script src="./js/jquery-3.5.1.min.js"></script>
-
+   <script src="./js/popper.min.js"></script>
    <script src="./js/bootstrap.min.js"></script>
    <script src="./js/index.js"></script>
 </body>
